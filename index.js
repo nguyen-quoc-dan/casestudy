@@ -200,7 +200,7 @@ let idSelect = '';
 let haveChoosed = false;
 // hàm lấy 50 50
 function fiftyFifty(id) {
-    if (id != 'disable') {
+    if (id =='start-btn') {
         let fiftyfifty = [0, 1, 2, 3];
         fiftyfifty.splice(Quizs[game.currentQuiz], 1);
         let indexTemp = Math.floor(Math.random() * 2);
@@ -208,11 +208,6 @@ function fiftyFifty(id) {
             if (i != indexTemp & i != Quizs[game.currentQuiz].correct)
                 document.getElementById('' + i).innerHTML = '';
             document.getElementById('start-btn').setAttribute('id','disable');
-    }
-// hàm dừng cuộc chơi
-    function endGame() {
-        restart()
-
     }
 }
 
@@ -249,6 +244,24 @@ function restart() {
     game.currentQuiz = 0;
     game.start();
 }
+
+// hàm dừng cuộc chơi
+function endGame(id) {
+    if (id == 'stop-btn') {
+        let temp = document.getElementById('prize' + (game.currentQuiz - 1)).innerHTML;
+        alert('Bạn đã dừng cuộc chơi! Giải thưởng của bạn là: ' + temp);
+    } else {
+        let money = '0$';
+        if (game.currentQuiz - 1 > 9)
+            money = document.getElementById('prize9').innerHTML;
+            else if (game.currentQuiz - 1 > 4)
+                money = document.getElementById('prize4').innerHTML;
+        alert('Bạn đã trả lời sai! Số tiền bạn nhận được là: ' + money);
+    }
+    restart()
+
+}
+
 // hàm set màu khi onclick
 function changeColorButton(id) {
     if (!btn) {
@@ -269,11 +282,11 @@ function checkWin(id) {
             .setAttribute("class", "gotPrize");
 
     } else {
-
-        alert("Rất tiếc, Câu trả lời của bạn chưa đúng");
+        // alert("Rất tiếc, Câu trả lời của bạn chưa đúng");
         document.getElementById('conditionalButton').
             innerHTML = "<button id='restartButton'" +
-            "class='start-btn btn' onclick='restart()'>Restart</button>"
+            "class='start-btn btn' onclick='restart()'>Restart</button>";
+        endGame(id)
     }
 }
 
