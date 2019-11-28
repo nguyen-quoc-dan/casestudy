@@ -121,15 +121,16 @@ const Quizs = [
             'D. Chỉ biến chứa giá trị'
         ],
         correct: 1
-    },{
-        question: '13: Ý nghĩa của từ khóa "this" trong JavaScript?',
+    },
+    {
+        question: '14: Toán tử được sử dụng để tạo một đối tượng mới từ lớp được định nghĩa trước đó là gì?',
         answers: [
-            'A. Không trường hợp nào đúng',
-            'B. Chỉ đối tượng hiện tại',
-            'C. Chỉ đối tượng trước đó',
-            'D. Chỉ biến chứa giá trị'
+            'A. create',
+            'B. function',
+            'C. new ',
+            'D. def'
         ],
-        correct: 1
+        correct: 2
     },
     {
         question: '15: Quốc Dân có đẹp trai không',
