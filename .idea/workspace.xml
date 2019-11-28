@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="411df990-995e-449f-8f09-bbf39e3a295c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/neu case study/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/.idea/neu case study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/neu case study.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/case.css" beforeDir="false" afterPath="$PROJECT_DIR$/case.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/case.html" beforeDir="false" afterPath="$PROJECT_DIR$/case.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/case.js" beforeDir="false" afterPath="$PROJECT_DIR$/case.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/image/Ai-la-trieu-phu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/Ai-la-trieu-phu.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/index.html/index" beforeDir="false" afterPath="$PROJECT_DIR$/index.html/index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neu case study/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html/index" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +55,7 @@
       <updated>1574883583236</updated>
       <workItem from="1574883584490" duration="7209000" />
       <workItem from="1574894575167" duration="17372000" />
-      <workItem from="1574921631385" duration="244000" />
+      <workItem from="1574921631385" duration="777000" />
     </task>
     <servers />
   </component>
