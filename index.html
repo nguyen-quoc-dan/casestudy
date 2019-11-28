@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="case.css">
 </head>
 <body>
-<audio autoplay id="myAudio" loop>
+<audio autoplay id="myAudio" controls>
     <source src="audio/background.mp3" type="audio/mp3">
 </audio>
 <div id="wrapper">
@@ -29,7 +29,7 @@
         <div class="controls" id="conditionalButton">
             <button id="next-btn" class="next-btn btn hide"onclick="nextQuestion()">Next</button>
             <button id="start-btn" class="start-btn btn" onclick="fiftyFifty(this.id)"> 50:50 </button>
-            <button id="opinion" class="start-btn btn" onclick=""> opinion </button>
+            <button id="opinion" class="start-btn btn" onclick="improving()"> opinion </button>
             <button id="stop-btn" class="start-btn btn" onclick="endGame(this.id)"> stop game </button>
 
         </div>

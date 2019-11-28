@@ -251,6 +251,7 @@ function endGame(id) {
         let temp = document.getElementById('prize' + (game.currentQuiz - 1)).innerHTML;
         alert('Bạn đã dừng cuộc chơi! Giải thưởng của bạn là: ' + temp);
     } else {
+        //elses  này sẽ set mức tiền khi trả lời sai
         let money = '0$';
         if (game.currentQuiz - 1 > 9)
             money = document.getElementById('prize9').innerHTML;
@@ -261,6 +262,12 @@ function endGame(id) {
     restart()
 
 }
+function improving(){
+    alert("Tính năng đang phát triển :V")
+}
+
+
+
 
 // hàm set màu khi onclick
 function changeColorButton(id) {
@@ -280,13 +287,16 @@ function checkWin(id) {
             'Câu Trả Lời Chính Xác';
         document.getElementsByTagName("div")['prize'+game.currentQuiz]
             .setAttribute("class", "gotPrize");
+        if (game.currentQuiz == 14) {
+            alert('Bạn đã trở thành tỉ phú!');
+            document.getElementById('conditionalButton').
+                innerHTML = "<button id='restartButton'" +
+                "class='start-btn btn' onclick='restart()'>Restart</button>";
+        }
 
     } else {
         // alert("Rất tiếc, Câu trả lời của bạn chưa đúng");
-        document.getElementById('conditionalButton').
-            innerHTML = "<button id='restartButton'" +
-            "class='start-btn btn' onclick='restart()'>Restart</button>";
-        endGame(id)
+            endGame(id);
     }
 }
 
