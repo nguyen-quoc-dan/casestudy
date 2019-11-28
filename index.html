@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="case.css">
-    <iframe src="https://www.nhaccuatui.com/mh/auto/d7feYb6x1RT8" allowfullscreen allow="autoplay"></iframe>
 </head>
 <body>
-
+<audio autoplay id="myAudio" loop>
+    <source src="audio/background.mp3" type="audio/mp3">
+</audio>
 <div id="wrapper">
     
     <div class="container">
@@ -27,9 +28,9 @@
 
         <div class="controls" id="conditionalButton">
             <button id="next-btn" class="next-btn btn hide"onclick="nextQuestion()">Next</button>
-            <button id="start-btn" class="start-btn btn" onclick=""> 50:50 </button>
+            <button id="start-btn" class="start-btn btn" onclick="fiftyFifty(this.id)"> 50:50 </button>
             <button id="opinion" class="start-btn btn" onclick=""> opinion </button>
-            <button id="stop-btn" class="start-btn btn" onclick=""> stop game </button>
+            <button id="stop-btn" class="start-btn btn" onclick="endGame()"> stop game </button>
 
         </div>
     </div>

@@ -179,6 +179,14 @@
     height: 30px;
     float: left;
 }
+
+#disable{
+    width: 150px;
+    height: 30px;
+    float: left;
+    background-color: #9f9f9f;
+}
+
 .controls .sub-btn {
     width: 175px;
     float: left;

@@ -198,6 +198,23 @@ let GameBoard = function () {
 let btn = false;
 let idSelect = '';
 let haveChoosed = false;
+// hàm lấy 50 50
+function fiftyFifty(id) {
+    if (id != 'disable') {
+        let fiftyfifty = [0, 1, 2, 3];
+        fiftyfifty.splice(Quizs[game.currentQuiz], 1);
+        let indexTemp = Math.floor(Math.random() * 2);
+        for (let i = 0; i < 4; i++)
+            if (i != indexTemp & i != Quizs[game.currentQuiz].correct)
+                document.getElementById('' + i).innerHTML = '';
+            document.getElementById('start-btn').setAttribute('id','disable');
+    }
+// hàm dừng cuộc chơi
+    function endGame() {
+        restart()
+
+    }
+}
 
 function resetColorAndStatusButton() {
     document.getElementsByTagName("button")[idSelect].setAttribute("class", "btn");
@@ -218,8 +235,10 @@ function nextQuestion() {
 //Hàm bắt đầu lại game khi trả lời sai
 function restart() {
     document.getElementById('conditionalButton').innerHTML=
-"<button id='start-btn' class='start-btn btn' onclick='checkWin(id)'>Đồng Ý</button>" +
-        "<button id='next-btn' class='next-btn btn hide'onclick='nextQuestion()'>Next</button>";
+    "<button id='next-btn' class='next-btn btn hide' onclick='nextQuestion()'>Next</button>"+
+    "<button id='start-btn' class='start-btn btn' onclick='fiftyFifty()'> 50:50 </button>"+
+    "<button id='opinion' class='start-btn btn' onclick=''> opinion </button>" +
+    "<button id='stop-btn' class='start-btn btn' onclick=''> stop game </button>";
     resetColorAndStatusButton();
     let temp;
     for(let i = game.currentQuiz; i >= 0; i--) {
