@@ -1,3 +1,4 @@
+// Lưu câu hỏi trong mảng
 const Quizs = [
     {
         question: ' 1: Hãy xác định câu lệnh dùng để khởi tạo một Repository mới',
@@ -152,7 +153,7 @@ const Quizs = [
     },
 
 ];
-
+//Khai báo Clas Câu hỏi
 let Quiz = function () {
     this.question = "";
     this.answers = [];
@@ -164,7 +165,7 @@ let Quiz = function () {
         this.correct = correct;
 
     };
-
+// lấy giá trị để hiển thị
     this.display = function () {
         document.getElementById("question").innerHTML = this.question;
         document.getElementById("0").innerHTML = this.answers[0];
@@ -175,11 +176,11 @@ let Quiz = function () {
     };
 
 };
-
+//bắt đầu chơi
 let GameBoard = function () {
     this.quizs = [];
     this.currentQuiz = 0;
-
+// hàm lấy phần tử câu hỏi
     this.creatQuizs = function () {
         for (let i = 0; i < Quizs.length; i++) {
             let quiz = new Quiz();
@@ -195,12 +196,14 @@ let GameBoard = function () {
         this.creatQuizs();
         this.quizs[this.currentQuiz].display();
     };
+    //thực hiện lấy phần tử tiếp theo của mảng câu hỏi
     this.nextQuiz = function () {
         this.currentQuiz++;
         haveChoosed = false;
         this.quizs[this.currentQuiz].display();
     };
 };
+//khai báo biến này để thay đổi màu khi onclick
 let btn = false;
 let idSelect = '';
 let haveChoosed = false;
@@ -211,7 +214,7 @@ function resetColorAndStatusButton() {
     document.getElementById('alert').innerHTML =
         '';
 }
-
+// Hàm chuyển tiếp câu hỏi
 function nextQuestion() {
     if (haveChoosed) {
         resetColorAndStatusButton();
@@ -221,7 +224,7 @@ function nextQuestion() {
         game.nextQuiz();
     }
 };
-
+//Hàm bắt đầu lại game khi trả lời sai
 function restart() {
     document.getElementById('conditionalButton').innerHTML=
 "<button id='start-btn' class='start-btn btn' onclick='checkWin(id)'>Đồng Ý</button>" +
@@ -236,7 +239,7 @@ function restart() {
     game.currentQuiz = 0;
     game.start();
 }
-
+// hàm set màu khi onclick
 function changeColorButton(id) {
     if (!btn) {
         document.getElementsByTagName("button")[id].setAttribute("class", "colorSelect");
@@ -246,18 +249,18 @@ function changeColorButton(id) {
     }
     ;
 };
-
+// Hàm check win
 function checkWin(id) {
     haveChoosed = true;
     if (id == Quizs[game.currentQuiz].correct) {
         document.getElementById("alert").innerHTML =
-            'Chuc mung ban da tra loi dung';
+            'Câu Trả Lời Chính Xác';
         document.getElementsByTagName("div")['prize'+game.currentQuiz]
             .setAttribute("class", "gotPrize");
 
     } else {
 
-        alert("ban da tra loi sai");
+        alert("Rất tiếc, Câu trả lời của bạn chưa đúng");
         document.getElementById('conditionalButton').
             innerHTML = "<button id='restartButton'" +
             "class='start-btn btn' onclick='restart()'>Restart</button>"
