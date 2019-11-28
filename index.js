@@ -132,16 +132,6 @@ const Quizs = [
         correct: 1
     },
     {
-        question: '14: Toán tử được sử dụng để tạo một đối tượng mới từ lớp được định nghĩa trước đó là gì?',
-        answers: [
-            'A. create',
-            'B. function',
-            'C. new ',
-            'D. def'
-        ],
-        correct: 2
-    },
-    {
         question: '15: Quốc Dân có đẹp trai không',
         answers: [
             'A. Có',
