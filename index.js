@@ -253,9 +253,9 @@ function endGame(id) {
     } else {
         //elses  này sẽ set mức tiền khi trả lời sai
         let money = '0$';
-        if (game.currentQuiz - 1 > 9)
+        if (game.currentQuiz > 9)
             money = document.getElementById('prize9').innerHTML;
-            else if (game.currentQuiz - 1 > 4)
+            else if (game.currentQuiz > 4)
                 money = document.getElementById('prize4').innerHTML;
         alert('Bạn đã trả lời sai! Số tiền bạn nhận được là: ' + money);
     }
