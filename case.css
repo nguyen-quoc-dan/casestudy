@@ -15,6 +15,8 @@
     width: 925px;
     height: 600px ;
     margin: 20px auto;
+     background: #cccccc;
+     border-radius: 5px;
 }
  #banner {
      width: 700px;
@@ -28,6 +30,9 @@
     line-height: 80px;
     text-align: center;
     color: #3987e2;
+    border-radius: 5px;
+    background: greenyellow;
+    margin: 10px 0px;
 }
 #footer {
     width: 200px;
@@ -164,7 +169,7 @@
     height: 200px;
     font-size: 30px;
     text-align: center;
-    line-height: 100px;
+    line-height: 70px;
     color: dodgerblue;
 }
 .controls {

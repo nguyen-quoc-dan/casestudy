@@ -1,14 +1,14 @@
 // Lưu câu hỏi trong mảng
 const Quizs = [
     {
-        question: ' 1: Hãy xác định câu lệnh dùng để khởi tạo một Repository mới',
+        question: ' 1: Quốc Dân có xinh gái không ?',
         answers: [
-            'A. git create',
-            'B. git add',
-            'C. git init',
-            'D. git commit'
+            'A. có',
+            'B. có có ',
+            'C. có có có',
+            'D. cả 3 đáp án trên'
         ],
-        correct: 2
+        correct: 3
     },
 
     {
@@ -133,7 +133,7 @@ const Quizs = [
         correct: 2
     },
     {
-        question: '15: Quốc Dân có đẹp trai không',
+        question: '15: bạn có yêu Quốc Dân không ?',
         answers: [
             'A. Có',
             'B. Có Có',
@@ -210,7 +210,7 @@ function fiftyFifty(id) {
             document.getElementById('start-btn').setAttribute('id','disable');
     }
 }
-
+//trả lại màu
 function resetColorAndStatusButton() {
     document.getElementsByTagName("button")[idSelect].setAttribute("class", "btn");
     btn = false;
@@ -262,6 +262,7 @@ function endGame(id) {
     restart()
 
 }
+//hàm này đang phat triển
 function improving(){
     alert("Tính năng đang phát triển :V")
 }
@@ -284,11 +285,11 @@ function checkWin(id) {
     haveChoosed = true;
     if (id == Quizs[game.currentQuiz].correct) {
         document.getElementById("alert").innerHTML =
-            'Câu Trả Lời Chính Xác';
+            'Câu Trả Lời Chính Xác, Bạn Có Muốn Chơi Tiếp?';
         document.getElementsByTagName("div")['prize'+game.currentQuiz]
             .setAttribute("class", "gotPrize");
         if (game.currentQuiz == 14) {
-            alert('Bạn đã trở thành tỉ phú!');
+            alert('Bạn đã trở thành tỉ phú! với giải  thưởng 500000000000$');
             document.getElementById('conditionalButton').
                 innerHTML = "<button id='restartButton'" +
                 "class='start-btn btn' onclick='restart()'>Restart</button>";
